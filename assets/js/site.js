@@ -1,32 +1,42 @@
-// write cool JS hwere!!
-let categoryList = []
+const frugtOgGront = [
+    "Æble", "Pære", "Blomme", "Banan", "Jordbær",
+    "Hindbær", "Solbær", "Kirsebær", "Vindrue", "Stikkelsbær",
+    "Kartoffel", "Gulerod", "Løg", "Rødbede", "Agurk",
+    "Tomat", "Peberfrugt", "Spinat", "Broccoli", "Blomkål",
+    "Rosenkål", "Majs", "Græskar", "Squash", "Porre",
+    "Spidskål", "Hvidkål", "Salat", "Ærter", "Radise",
+    "Rabarber"
+];
 
-//getCategories()
+let myScore = 0
 
-function getCategories() {
+let answer = ""
+newGame()
 
-    fetch('https://dummyjson.com/products/category-list')
 
-        .then((response) => {
-
-            if (!response.ok) {
-                throw new Error("OK is not OK!!");
-            }
-            return response.json()
-        })
-        .then((data) => {
-            categoryList = data
-            doStuff()
-        });
+function newGame() {
+    answer = getRandomItem(frugtOgGront)
+    console.log(answer);
 }
 
 
-function doStuff() {
-    console.table(categoryList);
-    //  finding stuff in arrays
 
+function getRandomItem(myArray) {
+    const randomIndex = Math.floor(Math.random() * myArray.length);
+    return myArray[randomIndex];
 }
 
 
-// finding stuff in strings
-const myString = "jeg er en meget flot kat, med en hat"
+
+function guessCallback() {
+    let userInput = document.getElementById('svar')
+
+    /* skriv kode her, der kan checke om brugeren har svarret rigtigt
+    og vise resultatet og score til bruger i dom elementet feedback*/
+
+
+    // eks.
+    document.getElementById('feedback').innerHTML = `du har svarret ${userInput.value} svarret er ${answer}`
+    newGame()
+}
+
