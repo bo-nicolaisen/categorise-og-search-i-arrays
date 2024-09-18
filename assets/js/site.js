@@ -1,7 +1,7 @@
 // write cool JS hwere!!
 let categoryList = []
 
-getCategories()
+//getCategories()
 
 function getCategories() {
 
@@ -22,5 +22,11 @@ function getCategories() {
 
 
 function doStuff() {
+    console.table(categoryList);
+    //  finding stuff in arrays
 
 }
+
+
+// finding stuff in strings
+const myString = "jeg er en meget flot kat, med en hat"
