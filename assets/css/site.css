@@ -1,0 +1,68 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+#categories {
+  display: flex;
+  flex-direction: row;
+  color: rgb(255, 255, 255);
+  background-color: black;
+}
+
+.dropdownContainer {
+  width: 100%;
+  position: relative;
+}
+
+.dropdownContainer .dropbtn {
+  width: 100%;
+}
+
+.dropdownContainer:hover .dropbtn {
+  color: rgb(165, 165, 165);
+  cursor: pointer;
+}
+
+.dropdownContainer .dropdown-content {
+  padding: 0.5em;
+  display: none;
+}
+
+.dropdownContainer:hover .dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: rgba(212, 212, 212, 0.921);
+  cursor: pointer;
+  z-index: 999;
+  width: 100%;
+}
+
+.catItem {
+  color: rgb(0, 0, 0);
+}
+
+.catItem:hover {
+  color: rgb(158, 158, 158);
+}
