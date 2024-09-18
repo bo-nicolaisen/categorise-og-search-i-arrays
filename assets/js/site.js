@@ -29,14 +29,27 @@ function getRandomItem(myArray) {
 
 
 function guessCallback() {
-    let userInput = document.getElementById('svar')
-
-    /* skriv kode her, der kan checke om brugeren har svarret rigtigt
-    og vise resultatet og score til bruger i dom elementet feedback*/
 
 
-    // eks.
-    document.getElementById('feedback').innerHTML = `du har svarret ${userInput.value} svarret er ${answer}`
+
+    // toLowerCase er en string method, der konverterer alle bogstaver til smp, så man kan sammenligne dem uden at få fejl ved store og små bogstaver.
+    let userInput = document.getElementById('svar').value.toLowerCase()
+    answer = answer.toLowerCase()
+
+
+
+    //--------------------------------------------------------------------
+    /* du skal skrive denne del af  funktionen om, så brugeren bare skal gætte en af elementerne i arrayen, så det ikke er så svært!!*/
+
+    if (userInput == answer) {
+        document.getElementById('feedback').innerHTML = `du har svarret ${userInput}..<br> og det er RIGTIGT!`
+    } else {
+        document.getElementById('feedback').innerHTML = `HA HA! forkert.<br> jeg tænkte på ${answer}`
+    }
+
+    //--------------------------------------------------------------------
+
+
     newGame()
 }
 
