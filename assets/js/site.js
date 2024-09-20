@@ -30,3 +30,7 @@ function doStuff() {
 
 // finding stuff in strings
 const myString = "jeg er en meget flot kat, med en hat"
+
+let result = myString.includes("kat");
+
+console.log(result);
